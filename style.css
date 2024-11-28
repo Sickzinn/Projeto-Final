@@ -203,3 +203,30 @@ button{
     transform: scale(1.1); /* Aumenta levemente o tamanho */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
 }
+
+/* Ajuste do botão de alternância para telas menores */
+@media (max-width: 768px) {
+    #theme-switch {
+        top: 10px; /* Aproxima do topo */
+        right: 10px; /* Ajusta a distância da borda direita */
+    }
+
+    /* Ajuste para o título e o subtítulo na navbar */
+    header.navbar h1 {
+        font-size: 1.6rem; /* Reduz tamanho do título */
+        margin-right: 60px; /* Garante espaço para o botão de tema */
+    }
+
+    header.navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    header.navbar p {
+        font-size: 1rem; /* Reduz o subtítulo para caber melhor */
+        margin-top: 5px;
+        text-align: center;
+    }
+}
