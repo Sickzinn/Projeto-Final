@@ -204,29 +204,34 @@ button{
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
 }
 
-/* Ajuste do botão de alternância para telas menores */
+/* Ajuste geral para o ícone de alternância */
+#theme-switch {
+    position: absolute; /* Mude para absoluto para maior controle */
+    top: 10px; /* Distância do topo */
+    right: 10px; /* Distância da borda direita */
+    z-index: 10; /* Garante que ele fique acima de outros elementos */
+}
+
+/* Ajustes específicos para telas menores */
 @media (max-width: 768px) {
-    #theme-switch {
-        top: 10px; /* Aproxima do topo */
-        right: 10px; /* Ajusta a distância da borda direita */
-    }
-
-    /* Ajuste para o título e o subtítulo na navbar */
-    header.navbar h1 {
-        font-size: 1.6rem; /* Reduz tamanho do título */
-        margin-right: 60px; /* Garante espaço para o botão de tema */
-    }
-
     header.navbar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
+        position: relative; /* Para que o ícone seja posicionado em relação à navbar */
+    }
+
+    #theme-switch {
+        top: 5px; /* Ajusta o espaçamento para caber em telas pequenas */
+        right: 10px; /* Mantém o alinhamento à direita */
+    }
+
+    header.navbar h1 {
+        font-size: 1.5rem; /* Reduz o tamanho do texto */
+        margin-right: 50px; /* Garante espaço para o ícone */
     }
 
     header.navbar p {
-        font-size: 1rem; /* Reduz o subtítulo para caber melhor */
-        margin-top: 5px;
-        text-align: center;
+        font-size: 0.9rem; /* Ajusta o tamanho do subtítulo */
     }
 }
+
+
+
